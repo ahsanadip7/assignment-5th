@@ -8,3 +8,13 @@ function getInputFieldTextById (id){
     const inputValueNumber = parseFloat(inputValue);
     return inputValueNumber;
 }
+
+
+function showSectionById(id){
+    document.getElementById('donate-card-container').classList.add('hidden')
+    document.getElementById('history-container').classList.add('hidden')
+
+    // show the section
+
+    document.getElementById(id).classList.remove('hidden');
+ }
