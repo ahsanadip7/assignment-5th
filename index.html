@@ -9,14 +9,14 @@
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-green-50">
+<body class="bg-[#F9F7F3]">
 
     <!-- navbar -->
    <nav class="fixed w-full top-0 left-0 backdrop-blur">
-    <div class="navbar flex justify-between py-10 lg:px-40 bg-gray-200">
+    <div class="navbar flex justify-between py-10 lg:px-40 bg-[#f9f7f365]">
 
         <div>
-            <a class="btn bg-primary text-white">Blog</a>
+            <a class="btn bg-primary text-white"  href="blog.html" target="_blank">Blog</a>
           </div>
 
         <div class="flex gap-3">
@@ -73,15 +73,17 @@
                         <!-- Open the modal using ID.showModal() method -->
                             <button id="donate-now-btn" class="btn btn-wide bg-primary text-[white] w-full rounded-2xl">Donate Now</button>
                             <dialog id="my_modal_1" class="modal">
-                            <div class="modal-box">
-                                <h3 class="text-lg font-bold">Congrates!</h3>
-                                <img src="assets/coin.png" alt="">
-                                <p class="py-4">You Have Donate for Humankind</p>
-                                <h3>Succesfully</h3>
-                                <div class="modal-action">
+                            <div class="modal-box grid justify-center">
+                                <h3 class="text-2xl font-bold text-center mb-3">Congrates!</h3>
+                                <div class="flex justify-center">
+                                    <img class="" src="assets/coin.png" alt="">
+                                </div>
+                                <p class="py-4 text-center">You Have Donate for Humankind</p>
+                                <h3 class="text-center font-semibold text-xl">Succesfully</h3>
+                                <div class="modal-action justify-center">
                                 <form method="dialog">
                                     <!-- if there is a button in form, it will close the modal -->
-                                    <button class="btn">close confirmation</button>
+                                    <button class="btn bg-primary text-white font-semibold">close confirmation</button>
                                 </form>
                                 </div>
                             </div>
@@ -124,7 +126,7 @@
        <!-- card 3 -->
 
        <section>
-        <div class="grid lg:grid-cols-2 gap-10 lg:w-[1140px]  mx-auto mt-20 bg-neutral-100 p-10 rounded-xl shadow-lg mb-20">
+        <div class="grid lg:grid-cols-2 gap-10 lg:w-[1140px]  mx-auto mt-20 bg-neutral-100 p-10 rounded-xl shadow-lg mb-5">
             <div >
                 <img class="w-full" src="assets/quota-protest.png" alt="">
             </div>
@@ -151,7 +153,7 @@
 
      <!-- history -->
 
-     <main id="history-container" class="block mt-64 pt-1">
+     <main id="history-container" class="hidden mt-64 pt-1">
 
         <div id="history-container">
 

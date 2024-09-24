@@ -11,7 +11,7 @@ const previousValue = getInputFieldTextById('older-value');
 const mainValue = getInputFieldTextById('main-amount');
 
 
- if(donateValue  >= 10 && donateValue <= mainValue){
+ if(!Number.isNaN(donateValue) && donateValue  >= 0 && donateValue <= mainValue ){
 
   
 
@@ -47,7 +47,7 @@ const mainValue = getInputFieldTextById('main-amount');
  }
 
  else(
-    alert('wrong input')
+    alert('invalid donation value')
  )
 })
 
@@ -66,7 +66,7 @@ document.getElementById('donate-now-btn-2').addEventListener('click', function()
     const previousValueFlood = getInputFieldTextById('older-value-2');
     const mainValue = getInputFieldTextById('main-amount');
     
-     if(donateValueFlood >= 10 && donateValueFlood <= mainValue){
+     if(donateValueFlood >= 0 && donateValueFlood <= mainValue){
       
     
         const newAmountFlood = previousValueFlood + donateValueFlood;
@@ -86,7 +86,7 @@ document.getElementById('donate-now-btn-2').addEventListener('click', function()
    div.classList.add("grid");
    div.innerHTML = `
       
-      <p class = "font-bold lg:text-3xl text-2xl border-solid border-2 border-indigo-600 p-12 mx-5 lg:mx-32 mt-10 rounded-2xl"> ${donateValueFlood} Taka is Donated for famine-2024 at Feni, Bangladesh.
+      <p class = "font-bold lg:text-3xl text-2xl border-solid border-2 border-indigo-600 p-12 mx-5 lg:mx-32 mt-10 rounded-2xl"> ${donateValueFlood} Taka is Donated for Flood Relief in Feni,Bangladesh.
       <br>
       <span class = "font-medium text-lg"> ${Date()} <span/> <p/>
    `
@@ -97,7 +97,7 @@ document.getElementById('donate-now-btn-2').addEventListener('click', function()
      }
     
      else(
-        alert('wrong input')
+        alert('invalid donation value')
      )
     })
 
@@ -114,7 +114,7 @@ document.getElementById('donate-now-btn-2').addEventListener('click', function()
       const previousValueQuota = getInputFieldTextById('older-value-3');
       const mainValue = getInputFieldTextById('main-amount');
       
-       if(donateValueQuota >= 10 && donateValueQuota <= mainValue){
+       if(donateValueQuota >= 0 && donateValueQuota <= mainValue){
          
       
           const newAmountQuota = previousValueQuota + donateValueQuota;
@@ -134,7 +134,7 @@ document.getElementById('donate-now-btn-2').addEventListener('click', function()
    div.classList.add("grid");
    div.innerHTML = `
      
-      <p class = "font-bold lg:text-3xl text-2xl border-solid border-2 border-indigo-600 p-12 mx-5 lg:mx-32 mt-10 rounded-2xl"> ${donateValueQuota} Taka is Donated for famine-2024 at Feni, Bangladesh.
+      <p class = "font-bold lg:text-3xl text-2xl border-solid border-2 border-indigo-600 p-12 mx-5 lg:mx-32 mt-10 rounded-2xl"> ${donateValueQuota} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh.
       <br>
       <span class = "font-medium text-lg"> ${Date()} <span/> <p/>
    `
@@ -145,7 +145,7 @@ document.getElementById('donate-now-btn-2').addEventListener('click', function()
        }
       
        else(
-          alert('wrong input')
+          alert('invalid donation value')
        )
       })
 
